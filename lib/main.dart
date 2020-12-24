@@ -30,20 +30,23 @@ class GirisSayfasi extends StatelessWidget {
               height: 80,
             ),
             Container(
-              width: 120,
-              height: 120,
+              width: double.infinity,
               decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("assets/logo.png"))),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              "Login Page",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold),
+                gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [Colors.deepOrange[200], Colors.white]),
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(90),
+                    bottomRight: Radius.circular(90)),
+              ),
+              child: Container(
+                  width: 120,
+                  height: 170,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("assets/logo.png")))),
             ),
             SizedBox(
               height: 60,
@@ -124,7 +127,7 @@ class GirisSayfasi extends StatelessWidget {
                               child: Container(
                                 alignment: Alignment.center,
                                 child: Text(
-                                  "Mail İle Giriş",
+                                  "Google İle Giriş",
                                   style: TextStyle(
                                     fontSize: 18,
                                     color: Colors.white,
